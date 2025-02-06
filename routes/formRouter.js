@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const messages = require('../data');
+const {handleCreateMessage} = require('../controllers/messagesController')
 
 const formRouter = Router();
 
@@ -7,10 +7,6 @@ formRouter
 .get('/new', (req, res) => {
     res.render('form')
 })
-.post('/new', (req, res) => {
-    const {user, text} = req.body;
-    messages.push({ text, user, added: new Date() });
-    res.redirect('/')
-});
+.post('/new', handleCreateMessage);
 
 module.exports = formRouter;

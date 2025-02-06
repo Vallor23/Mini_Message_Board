@@ -1,10 +1,9 @@
 const { Router } = require('express');
-const messages = require('../data');
+
+const {handleGetMessage} = require('../controllers/messagesController')
 
 const indexRouter = Router();
 
-indexRouter.get('/', (req, res) => {
-    res.render('index', {title: "Mini Messageboard", messages: messages})
-});
+indexRouter.get('/', handleGetMessage);
 
 module.exports = indexRouter;
