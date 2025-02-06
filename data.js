@@ -1,14 +1,7 @@
-const messages = [
-    {
-      text: "Hi there!",
-      user: "Amando",
-      added: new Date()
-    },
-    {
-      text: "Hello World!",
-      user: "Charles",
-      added: new Date()
-    }
-  ];
+const sampleMessages = [
+  { username: 'Alice', text: 'Hello, world!', added: Date.now() },
+  { username: 'Bob', text: 'Hi there!', added: Date.now() },
+  { username: 'Charlie', text: 'Good morning!', added: Date.now() },
+];
 
-  module.exports = messages;
+module.exports = sampleMessages;
